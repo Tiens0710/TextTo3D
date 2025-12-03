@@ -172,7 +172,7 @@ def main(args, extras) -> None:
     def set_system_status(system: BaseSystem, ckpt_path: Optional[str]):
         if ckpt_path is None:
             return
-        ckpt = torch.load(ckpt_path, map_location="cpu")
+        ckpt = torch.load(ckpt_path, map_location="cpu", weights_only=False)
         system.set_resume_status(ckpt["epoch"], ckpt["global_step"])
 
     if args.train:
