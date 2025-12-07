@@ -64,6 +64,26 @@ def main(args, extras) -> None:
     from pytorch_lightning.loggers import CSVLogger, TensorBoardLogger
     from pytorch_lightning.utilities.rank_zero import rank_zero_only
 
+    # FIX: PyTorch 2.6+ changed torch.load to weights_only=True by default
+    # Since we're loading our own trusted checkpoints with OmegaConf configs,
+    # we need to either add many safe globals or use weights_only=False
+    # Using weights_only=False for checkpoints we created ourselves is safe
+    import torch
+    
+    # Store original torch.load
+    _original_torch_load = torch.load
+    
+    # Wrapper that defaults to weights_only=False for backward compatibility
+    def _patched_torch_load(f, map_location=None, pickle_module=None, *, weights_only=None, **kwargs):
+        # Default to False if not specified, for backward compatibility
+        if weights_only is None:
+            weights_only = False
+        return _original_torch_load(f, map_location=map_location, pickle_module=pickle_module, 
+                                    weights_only=weights_only, **kwargs)
+    
+    # Patch torch.load temporarily
+    torch.load = _patched_torch_load
+
     if args.typecheck:
         from jaxtyping import install_import_hook
 
