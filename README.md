@@ -10,10 +10,9 @@ Try it out instantly in Google Colab:
 
 ## 🎨 Results
 
-| Prompt: "A delicious hamburger" | Prompt: "A zoomed out DSLR photo of a baby bunny" |
-| :---: | :---: |
-| <img src="img/output.jpg" width="300"/> |
-| *(Replace with your image path)* | *(Replace with your image path)* |
+| Prompt: "A zoomed out DSLR photo of a baby bunny" |
+| :---: |
+| <img src="img/panda.jpg" width="300"/>
 
 ## 🚀 Usage
 
