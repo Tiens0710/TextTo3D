@@ -17,3 +17,7 @@ Try it out instantly in Google Colab:
 | Prompt: "a DSLR photo of a corgi taking a selfi" |
 | :---: |
 | <img src="img/cokri.png" width="660"/>
+
+## License & Credits
+
+This project is built upon [threestudio](https://github.com/threestudio-project/threestudio).
