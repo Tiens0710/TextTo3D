@@ -16,4 +16,4 @@ Try it out instantly in Google Colab:
 
 | Prompt: "a DSLR photo of a corgi taking a selfi" |
 | :---: |
-| <img src="img/cokri.png" width="600"/>
+| <img src="img/cokri.png" width="700"/>
