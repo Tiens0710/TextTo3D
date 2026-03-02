@@ -10,7 +10,7 @@ Try it out instantly in Google Colab:
 
 ## Results
 
-| Prompt: "a zoomed out DSLR photo of a baby bunny sitting on top of a stack of pancakes" |
+| Prompt: "a zoomed out DSLR photo of a baby panda sitting on top of a stack of pancakes" |
 | :---: |
 | <img src="img/panda.jpg" width="300"/>
 
