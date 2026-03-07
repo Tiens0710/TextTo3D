@@ -3,6 +3,7 @@ from . import (
     dreamfusion,
     eff_dreamfusion,
     fantasia3d,
+    hybrid_sds_sdi,
     imagedreamfusion,
     instructnerf2nerf,
     latentnerf,
